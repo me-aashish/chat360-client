@@ -35,7 +35,7 @@ function FilterLogComponent(){
         const startTimestamp = new Date(startTime).getTime();
         const endTimestamp = new Date(endTime).getTime();
         if(startTimestamp > endTimestamp) alert("Start time should be less than or equal to End time")
-        const response = await axios.get(`${BASE_URL}+/api/v1/filter/timestamp`, {
+        const response = await axios.get(`${BASE_URL}/api/v1/filter/timestamp`, {
             params: {
                 property: 'timestamp',
                 startTimeValue: startTime,
