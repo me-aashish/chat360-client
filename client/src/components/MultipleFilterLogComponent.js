@@ -11,7 +11,7 @@ function MultiFilterLogComponent(){
   const [errorMsg, setError] = useState("");
 
   const handleMultiFilter = async() => {
-    if(!logLevel || !logMessage || !logMetadata){
+    if(!logLevel && !logMessage && !logMetadata){
       alert("please add any one of the fields")
       return;
     }
