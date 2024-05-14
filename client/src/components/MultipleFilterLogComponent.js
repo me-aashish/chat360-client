@@ -13,6 +13,7 @@ function MultiFilterLogComponent(){
   const handleMultiFilter = async() => {
     if(!logLevel || !logMessage || !logMetadata){
       alert("please add any one of the fields")
+      return;
     }
     const postBody = [];
 

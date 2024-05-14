@@ -13,7 +13,10 @@ function FilterLogComponent(){
   const [errorMsg, setError] = useState("");
 
   const handleFilterLogsByLogLevel = async() => {
-    if(!logLevel) alert("please add the value")
+    if(!logLevel){
+      alert("please add the value")
+      return;
+    }
     try {
       console.log(BASE_URL);
         const response = await axios.get(`${BASE_URL}/api/v1/filter`, {
@@ -32,7 +35,10 @@ function FilterLogComponent(){
   };
 
   const handleFilterLogsByTimestamp = async() => {
-    if(!startTime || !endTime) alert("please add the value")
+    if(!startTime || !endTime) {
+      alert("please add the value")
+      return;
+    }
      try {
         const startTimestamp = new Date(startTime).getTime();
         const endTimestamp = new Date(endTime).getTime();
@@ -53,7 +59,10 @@ function FilterLogComponent(){
   };
 
   const handleFilterLogsByMessage = async() => {
-    if(!logMessage) alert("please add the value")
+    if(!logMessage) {
+      alert("please add the value")
+      return;
+    }
     try {
         const response = await axios.get(`${BASE_URL}/api/v1/filter`, {
             params: {
@@ -70,7 +79,10 @@ function FilterLogComponent(){
   };
 
   const handleFilterLogsByMetadataSource = async() => {
-    if(!logMetadata) alert("please add the value")
+    if(!logMetadata) {
+      alert("please add the value")
+      return;
+    }
     try {
         const response = await axios.get(`${BASE_URL}/api/v1/filter`, {
             params: {
