@@ -45,7 +45,7 @@ function MultiFilterLogComponent(){
 
   return (
     <div>
-      <h1>Mutli-Log Filter</h1>
+      <h1>Mutli-Filter Log </h1>
       <div className="logFilterContainer">
         <label>Log Level:</label>
         <input type="text" value={logLevel} onChange={(e) => setLogLevel(e.target.value)} /> 
