@@ -1,1 +1,1 @@
-export const BASE_URL = "https://chat360-server-production.up.railway.app";
+export const BASE_URL = "https://chtat360-assignment-production.up.railway.app";
